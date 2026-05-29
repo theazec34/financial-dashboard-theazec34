@@ -1,0 +1,15 @@
+import type { FinancialMovement } from "@/lib/financial-types";
+
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "";
+
+export async function fetchFinancialMovements(
+  signal?: AbortSignal,
+): Promise<FinancialMovement[]> {
+  const response = await fetch(`${API_BASE_URL}/api/metrics`, { signal });
+
+  if (!response.ok) {
+    throw new Error(`API request failed (${response.status})`);
+  }
+
+  return response.json() as Promise<FinancialMovement[]>;
+}

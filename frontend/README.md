@@ -24,6 +24,12 @@ frontend/src/
 
 ## Changelog (justificado)
 
+### 2026-06-01 — Entregables de especificacion final
+
+| Cambio | Archivos | Justificación |
+|--------|----------|---------------|
+| Contrato frontend para nuevas funcionalidades | `specs/api-types.ts`, `specs/param-types.ts`, `specs/components.md`, `specs/README.md` | Cierre del proyecto con definicion formal de tipos, parametros, componentes y edge cases para F1/F2/F3, alineado con `/docs`. |
+
 ### 2026-05-29 — Proxy configurable para dev local y Docker
 
 | Cambio | Archivos | Justificación |

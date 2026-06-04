@@ -2,13 +2,13 @@
 
 ## Resumen
 
-| Capa | Tecnologías |
-|------|-------------|
-| Frontend | React 19, TypeScript 6, Vite 8, Tailwind CSS 4, Recharts, Lucide |
-| Backend | FastAPI, Python 3.13, Pydantic, Uvicorn |
-| Tests | Vitest (frontend), pytest (backend) |
-| Contenedores | Docker Compose (frontend + backend) |
-| Tooling | ESLint 9, shadcn/ui (New York), path alias `@/` |
+| Capa         | Tecnologías                                                              |
+| ------------ | ------------------------------------------------------------------------ |
+| Frontend     | React 19, TypeScript 6, Vite 8, Tailwind CSS 4, Recharts, Lucide         |
+| Backend      | FastAPI, Python 3.13, Pydantic, Uvicorn                                  |
+| Tests        | Vitest (frontend), pytest (backend)                                      |
+| Contenedores | Docker Compose (frontend + backend)                                      |
+| Tooling      | ESLint 9, shadcn/ui (New York), path alias `@/`, skills de mantenimiento |
 
 ---
 
@@ -18,7 +18,7 @@
 
 - **Vite 8** — dev server `:5173`, HMR, proxy `/api`
 - **TypeScript** — `strict`-ish (`noUnusedLocals`, `verbatimModuleSyntax`)
-- **React 19** — StrictMode en `main.tsx`
+- **React 19** — StrictMode en `main.tsx`, code splitting con `React.lazy` + `Suspense` para charts
 
 ### UI y estilos
 
@@ -39,8 +39,8 @@ App.tsx           → composición
 
 ### Variables de entorno
 
-| Variable | Uso |
-|----------|-----|
+| Variable            | Uso                                               |
+| ------------------- | ------------------------------------------------- |
 | `VITE_API_BASE_URL` | Origen del backend (opcional; vacío = proxy Vite) |
 
 ### Scripts
@@ -94,11 +94,18 @@ proxy: { "/api": { target: "http://backend:8000" } }
 
 ## Agentes de IA
 
-| Recurso | Path |
-|---------|------|
-| Reglas | `.agents/rules/` |
-| Memory bank | `memory-bank/` |
-| Guía | `AGENTS.md` |
+| Recurso     | Path              |
+| ----------- | ----------------- |
+| Reglas      | `.agents/rules/`  |
+| Skills      | `.agents/skills/` |
+| Memory bank | `memory-bank/`    |
+| Guía        | `AGENTS.md`       |
+
+### Skills locales activas
+
+- `accessibility`
+- `vercel-react-best-practices`
+- `operational-maintenance`
 
 ---
 
